@@ -10,7 +10,7 @@ export default function ProductByBrand({ route }) {
   const navigation = useNavigation();
   const { data: products, isLoading } = useGetProductByBrandQuery(brandId);
   return (
-    <View className="px-2 mt-10 space-y-2">
+    <View className="mt-9 space-y-2 bg-white h-full">
       <View className="flex flex-row justify-between py-3 px-3 bg-white">
         <View className="flex flex-row items-center space-x-3">
           <Text onPress={() => navigation.goBack()}>
@@ -22,8 +22,8 @@ export default function ProductByBrand({ route }) {
           <Icon name="search" size={25} color="#000" />
         </View>
       </View>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <View className="flex flex-row flex-wrap gap-x-5 gap-y-3">
+      <ScrollView showsVerticalScrollIndicator={false} className="w-full">
+        <View className="flex flex-row justify-center flex-wrap gap-x-3 gap-y-3">
           {products &&
             products.map((product) => {
               return (

@@ -6,7 +6,6 @@ import { useNavigation } from "@react-navigation/native";
 import { useGetSubCategoriesByCategoryQuery } from "../api/subCategoryApi";
 import {
   useGetProductByCategoryQuery,
-  useGetProductBySubCategoryQuery,
 } from "../api/productApi";
 
 export default function SubCategoryProductScreen({ route }) {
@@ -37,14 +36,14 @@ export default function SubCategoryProductScreen({ route }) {
             })}
         </ScrollView>
       </View>
-      <ScrollView showsVerticalScrollIndicator={false} className="bg-[#F5F6FB]">
-        <View className="flex flex-row items-center space-x-3 ml-5 mt-3">
+      <ScrollView showsVerticalScrollIndicator={false} className="bg-[#ffffff]">
+        <View className="flex flex-row items-center space-x-3 ml-3 mt-3">
           <Text onPress={() => navigation.goBack()}>
             <FontAwesomeIcon name="arrow-left" size={25} color="#000" />
           </Text>
           <Text>Go back</Text>
         </View>
-        <View className="flex flex-row flex-wrap gap-2 mx-2 mt-1">
+        <View className="flex flex-row flex-wrap gap-2 ml-1 mt-1">
           {products &&
             products.map((product) => {
               return (

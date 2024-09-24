@@ -5,7 +5,7 @@ import storeByData from "../../data/shopByStoreData";
 export default function ShopByStore() {
   return (
     <View className="space-y-2">
-      <Text className="text-xl font-semibold">ShopByStore</Text>
+      <Text className="text-xl font-semibold">Shop By Store</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} className="space-x-2">
         {storeByData.map((store) => {
           return (

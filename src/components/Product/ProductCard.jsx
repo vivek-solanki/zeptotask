@@ -12,7 +12,7 @@ export default function ProductCard({ product }) {
     dispatch(addProduct({ product, quantity }));
   };
   return (
-    <View key={product._id} className="space-y-2">
+    <View key={product._id} className="space-y-2 bg-slate-100 p-2 rounded-md">
       <TouchableOpacity
         onPress={() => {
           navigation.navigate("ProductDetailsScreen", {

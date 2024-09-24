@@ -12,7 +12,7 @@ const SignInScreen = ({ navigation }) => {
   useEffect(() => {
     AsyncStorage.getItem("userToken").then((token) => {
       if (token) {
-        navigation.navigate("Home");
+        navigation.navigate("Main");
       } else {
         navigation.navigate("SignIn");
       }

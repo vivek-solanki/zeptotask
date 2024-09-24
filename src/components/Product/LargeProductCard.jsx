@@ -12,7 +12,7 @@ export default function LargeProductCard({ product }) {
     dispatch(addProduct({ product, quantity }));
   };
   return (
-    <View className="bg-white rounded-md p-2">
+    <View className="border border-slate-100 rounded-md p-2">
       <TouchableOpacity
         onPress={() => {
           navigation.navigate("ProductDetailsScreen", {

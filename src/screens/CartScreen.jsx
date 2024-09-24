@@ -3,12 +3,7 @@ import React from "react";
 import Icon from "react-native-vector-icons/FontAwesome";
 import FontistoIcon from "react-native-vector-icons/Fontisto";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  addProduct,
-  removeProduct,
-  updateQuantity,
-  cleanCart,
-} from "../features/cartSlice";
+import { addProduct, removeProduct } from "../features/cartSlice";
 
 export default function CartScreen() {
   const { products, totalQuantity, totalPrice } = useSelector(
@@ -23,16 +18,8 @@ export default function CartScreen() {
   const handleRemoveFromCart = (productId, quantity) => {
     dispatch(removeProduct({ productId, quantity }));
   };
-
-  const handleUpdateQuantity = (productId, quantity) => {
-    dispatch(updateQuantity({ productId, quantity }));
-  };
-
-  const handleCleanCart = () => {
-    dispatch(cleanCart());
-  };
   return (
-    <View className="mt-10">
+    <View className="mt-10 h-full bg-white">
       {/* Header */}
       <View className="flex flex-row items-center justify-between py-3 px-3 bg-white">
         <View className="flex flex-row items-center space-x-3">
